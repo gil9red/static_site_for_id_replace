@@ -11,8 +11,8 @@
                     text = text.replace('id="111"', 'id="' + counter + '"');
                     counter++;
                 }
-
-                document.getElementById("output").innerHTML = text;
+                
+                document.getElementById("output").value = text;
             }
         </script>
     </head>
@@ -51,7 +51,7 @@
                     <textarea id="output" cols="50" rows="20"></textarea>
                 </td>
             </tr>
-            <tr><td><input type="submit" value="Выполнить!" onclick="run()"><td></tr>
+            <tr><td><button onclick="run()">Выполнить!</button><td></tr>
         </table>
     </body>
 </html>
