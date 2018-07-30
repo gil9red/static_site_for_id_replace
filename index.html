@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script>
+            function run() {
+                var text = document.getElementById("input").value;
+                var counter = 3000;
+
+                while (text.includes('id="111"')) {
+                    text = text.replace('id="111"', 'id="' + counter + '"');
+                    counter++;
+                }
+
+                document.getElementById("output").innerHTML = text;
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <textarea id="input" cols="50" rows="20">
+<item id="111">
+<title>Заголовок</title>
+<description>Описание</description>
+<images>
+<image id="111">фото1</image>
+<image id="111">фото2</image>
+</images>
+</item>
+<item id="111">
+<title>Заголовок</title>
+<description>Описание</description>
+<images>
+<image id="111">фото1</image>
+<image id="111">фото2</image>
+</images>
+</item>
+<item id="111">
+<title>Заголовок</title>
+<description>Описание</description>
+<images>
+<image id="111">фото1</image>
+<image id="111">фото2</image>
+</images>
+</item>
+                    </textarea>
+                </td>
+                <td>
+                    <textarea id="output" cols="50" rows="20"></textarea>
+                </td>
+            </tr>
+            <tr><td><input type="submit" value="Выполнить!" onclick="run()"><td></tr>
+        </table>
+    </body>
+</html>
